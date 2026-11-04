@@ -1,0 +1,9 @@
+O:\PRG\MEXGPO1\ASI486\BLACKLIST_486.DBF:
+
+tel,fe_agre,os,solicitud
+
+
+
+O:\HISTORIA\GPO1\486\PURGA.DBF
+
+folio,cliente,sub_cte,nombre1,nombre2,rfc,direcc1,direcc2,direcc3,direcc4,direcc5,gestor1,cuenta,tipo,tipo2,tel1,tel2,tel3,sdo_act,capital,fe_asig,fe_rec,fe_reg,ciclo,pvs,gestor2,estado,sucursal,area,edo,cuenta2,riesgo,des_prod,status,bucket,tramo,trabajo,modallidad,cuenta3,estra3,tel4,tel5,tel6,tel7,tel8,tel9,tel10,tel11,tel12,tel13,tel14,tel15,tel16,segmento2,saldo1,saldo2,saldo3,garan,ree,etiqueta
