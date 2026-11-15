@@ -1,1 +1,3 @@
 select dmhostup, count(*) from rcvry.delqmst where dmacctg='1' and dmcompany in ('486') and dmstatus is null GROUP BY dmhostup;
+
+13/11/26	6855
