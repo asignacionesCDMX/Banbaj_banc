@@ -1,3 +1,25 @@
 select dmhostup, count(*) from rcvry.delqmst where dmacctg='1' and dmcompany in ('486') and dmstatus is null GROUP BY dmhostup;
 
 13/11/26	6855
+
+
+---------------------------------------
+10. 
+Msg 3729, Level 16, State 3, Procedure fn_texto, Line 4 [Batch Start Line 6]
+Cannot ALTER 'cfg.fn_texto' because it is being referenced by object 'fn_fecha'.
+Msg 3729, Level 16, State 3, Procedure fn_importe, Line 4 [Batch Start Line 20]
+Cannot ALTER 'cfg.fn_importe' because it is being referenced by object 'fn_entero'.
+
+---------------------------------------------------------------------------------------------------
+
+EXEC ops.sp_bajar_cyber 'STATUS', @solo_bajar = 1;      -- debe decir "STATUS: n registros bajados"
+EXEC ops.sp_arribo_bajar;                                -- baja DELQMST, DMHOSTUP y PHONE_G1
+SELECT FECHA, CUENTAS FROM stg.CYBER_HOSTUP ORDER BY FECHA DESC;   -- lo mismo que val.txt, con la fecha en AAAAMMDD
+
+STATUS: 6855 registros bajados a stg.CYBER_STATUS
+
+(0 rows affected)
+
+Completion time: 2026-11-15T12:56:32.3839959-06:00
+
+*resultado vacio*
