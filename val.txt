@@ -23,3 +23,14 @@ STATUS: 6855 registros bajados a stg.CYBER_STATUS
 Completion time: 2026-11-15T12:56:32.3839959-06:00
 
 *resultado vacio*
+
+----------------------------------
+EXEC ops.sp_migrar_486 @carpeta = N'C:\MIGRA486\';
+EXEC ops.sp_migrar_486 @carpeta = N'C:\MIGRA486\', @reemplazar =1;
+
+Msg 4879, Level 16, State 1, Line 1
+Bulk load failed due to invalid column value in CSV data file C:\MIGRA486\HISTORIA.csv in row 151946, column 29.
+Msg 7399, Level 16, State 1, Line 1
+The OLE DB provider "BULK" for linked server "(null)" reported an error. The provider did not give any information about the error.
+Msg 7330, Level 16, State 2, Line 1
+Cannot fetch a row from OLE DB provider "BULK" for linked server "(null)".
