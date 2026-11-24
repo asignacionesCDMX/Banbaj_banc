@@ -1,0 +1,124 @@
+        SET @Body = '
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualización Address y Phone</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f0f2f5; font-family: ''Segoe UI'', Arial, sans-serif;">
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f0f2f5;">
+        <tr>
+            <td align="center" style="padding: 40px 10px;">
+
+                <table border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    
+                    <!-- Encabezado con Ícono y Título -->
+                    <tr>
+                        <td align="center" style="background-color: #1e3a8a; padding: 40px 40px; border-radius: 20px 20px 0 0;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" style="font-size: 42px; color: #ffffff; line-height: 1;">
+                                        <div style="background-color: rgba(255,255,255,0.15); width: 70px; height: 70px; line-height: 70px; border-radius: 50%; text-align: center;">
+                                            &#x2713;
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding-top: 20px;">
+                                        <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600; letter-spacing: 0.5px;">
+                                            Actualización Address y Phone 
+                                        </h1>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Cuerpo Principal -->
+                    <tr>
+                        <td style="padding: 40px 50px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="color: #475569; font-size: 15px; line-height: 1.6;">
+                                        <p style="margin: 0 0 15px 0;">Buen día,</p>
+                                        <p style="margin: 0 0 25px 0;">El proceso de actualización de Address y Phone en Oracle (<strong style="color: #1e293b;">412</strong>) ha <span style="color: #16a34a; font-weight: 700;">FINALIZADO CORRECTAMENTE</span>.</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Tarjeta Contenedora con la Tabla de Registros -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f8fafc; border-radius: 16px; margin-bottom: 30px; border: 1px solid #e2e8f0; overflow: hidden;">
+                                <tr>
+                                    <td style="padding: 25px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td style="color: #64748b; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding-bottom: 15px;">
+                                                    Resumen de Registros Procesados
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse; background-color: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                                            <thead>
+                                                <tr style="background-color: #1e3a8a; color: #ffffff;">
+                                                    <th style="padding: 12px 15px; text-align: left; font-size: 13px; font-weight: 600;">Entidad</th>
+                                                    <th style="padding: 12px 15px; text-align: left; font-size: 13px; font-weight: 600;">Total Acumulado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="border-bottom: 1px solid #f1f5f9;">
+                                                    <td style="padding: 12px 15px; color: #334155; font-size: 14px;"><strong>rcvry.ADDRESS</strong></td>
+                                                    <td style="padding: 12px 15px; color: #3b82f6; font-size: 14px; font-weight: 600;">' + ISNULL(@TotalAddress, '0') + '</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 12px 15px; color: #334155; font-size: 14px;"><strong>rcvry.PHONE</strong></td>
+                                                    <td style="padding: 12px 15px; color: #3b82f6; font-size: 14px; font-weight: 600;">' + ISNULL(@TotalPhone, '0') + '</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p style="margin: 15px 0 0 0; color: #94a3b8; font-size: 12px;">Fecha de Ejecución: ' + CONVERT(VARCHAR(30), GETDATE(), 120) + '</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Firma Corporativa -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #f1f5f9; padding-top: 30px;">
+                                <tr>
+                                    <td style="border-left: 3px solid #3b82f6; padding-left: 20px;">
+                                        <div style="color: #1e293b; font-size: 17px; font-weight: 700;">Especialista Asignaciones</div>
+                                        <div style="color: #3b82f6; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px;">TI SERTEC | CDMX</div>
+                                        
+                                        <div style="font-size: 13px; color: #64748b; margin-top: 12px; line-height: 1.5;">
+                                            <strong>Tel:</strong> (0155) 7099 0104 | <strong>Ext:</strong> 1416<br>
+                                            <strong>Email:</strong> <a href="mailto:asig.cdmx@sertec.com.mx" style="color: #3b82f6; text-decoration: none;">asig.cdmx@sertec.com.mx</a><br>
+                                            <a href="http://www.sertec.com.mx" style="color: #1e3a8a; text-decoration: none; font-weight: 700; font-size: 11px;">WWW.SERTEC.COM.MX</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer de Confidencialidad -->
+                    <tr>
+                        <td style="background-color: #f1f5f9; padding: 30px 50px; border-radius: 0 0 20px 20px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="color: #94a3b8; font-size: 10px; line-height: 1.5; text-align: justify;">
+                                        <p style="margin: 0 0 10px 0;"><strong>CONFIDENCIALIDAD:</strong> Este mensaje es exclusivamente para el destinatario. Si lo recibe por error, por favor elimínelo de inmediato.</p>
+                                        <p style="margin: 0;"><strong>CONFIDENTIALITY:</strong> This email is intended solely for the addressee. If received in error, please destroy immediately.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>';
